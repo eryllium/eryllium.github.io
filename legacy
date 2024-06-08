@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>awooga</title>
+   <meta name="viewport" content="width=device-width, initial-scale=0.65, user-scalable=no">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+   <link rel="icon" href="favicon.png" type="image/x-icon">
+   <style>
+       body {
+           font-family: 'Jersey 15', sans-serif;
+           background-color: #222;
+           color: #eee;
+           opacity: 0;
+           animation: fadeInAnimation 2s ease-in forwards;
+           padding:20px
+       }
+
+       @keyframes fadeInAnimation {
+           from {
+               opacity: 0;
+           }
+           to {
+               opacity: 1;
+           }
+       }
+
+       #navbar a {
+           color: #ccc;
+       }
+
+       .container {
+           color: #eee;
+       }
+
+       .container pre {
+           color: #ccc;
+           font-size: smaller;
+       }
+
+       #navbar a:hover {
+           color: #a59b9b;
+       }
+
+       .center-image {
+           display: flex;
+           justify-content: center;
+           margin-top: 20px;
+       }
+
+       #status {
+           text-align: center;
+       }
+
+       #status.online {
+           color: green;
+       }
+   </style>
+   <!-- Add Open Graph metadata for link preview -->
+   <meta property="og:title" content="SPONSORED BY 1XBET & SUPERBET">
+   <meta property="og:description" content="AUTORITĂȚILE ÎL URĂSC! AFLĂ CUM FURĂ CUPRUL FĂRĂ A FI URMĂRIT (INDETECTABIL!)">
+   <meta property="og:image" content="https://eryllium.github.io/real2.png">
+</head>
+<body>
+   <div id="navbar" style="text-align: center; margin: 4px;">
+       <span>
+           <a href="/">Home</a>
+       </span>
+       |
+       <span>
+           <a href="https://fleepy.tv/">nicked the navbar off this site 😭</a>
+       </span>
+       |
+       <span>
+           <a href="https://momazosdiego.com/">momazos diego</a>
+       </span>
+       |
+       <span>
+           <a href="https://discord.com/users/1199041169657696297">'cord</a>
+       </span>
+   </div>
+
+   <div class="container text-center">
+       <pre>
+  ___.                        .__  .__  .__               
+  \_ |__   ___________ ___.__.|  | |  | |__|__ __  _____  
+   | __ \_/ __ \_  __ <   |  ||  | |  | |  |  |  \/     \ 
+   | \_\ \  ___/|  | \/\___  ||  |_|  |_|  |  |  /  Y Y  \
+   |___  /\___  >__|   / ____||____/____/__|____/|__|_|  /
+       \/     \/       \/                              \/  
+       </pre>
+       <div id="status"></div>
+   </div>
+
+   <hr>
+
+   <div class="center-image">
+       <img src="real1.png" alt="Supporting the cause,every day.">
+   </div>
+
+   <hr>
+
+   <iframe src="https://john.citrons.xyz/embed?ref=example.com" style="margin-left:auto;display:block;margin-right:auto;max-width:732px;width:100%;height:94px;border:none;"></iframe>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   <script>
+       let data = fetch("https://api.lanyard.rest/v1/users/1199041169657696297").then((data)=>{
+           data.json().then((data2)=>{
+               let status = data2.data.discord_status;
+               let platform = '';
+               if (data2.data.active_on_discord_web) {
+                   platform = '(Web)';
+               } else if (data2.data.active_on_discord_desktop) {
+                   platform = '(Desktop)';
+               } else if (data2.data.active_on_discord_mobile) {
+                   platform = '(Mobile)';
+               }
+               let statusElement = document.getElementById("status");
+               statusElement.innerHTML = `I am currently: ${status} ${platform}`;
+               if (status === "online") {
+                   statusElement.classList.add("online");
+               }
+           })
+       })
+   </script>
+</body>
+</html>
