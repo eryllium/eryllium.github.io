@@ -3,20 +3,20 @@
 <head>
    <meta charset="UTF-8">
    <title>awooga</title>
-   <meta name="viewport" content="width=device-width, initial-scale=0.65, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
    <link rel="icon" href="favicon.png" type="image/x-icon">
    <style>
        body {
-           font-family: 'Jersey 15', sans-serif;
+           font-family: 'IBM Plex Mono', sans-serif;
            background-color: #222;
            color: #eee;
            opacity: 0;
            animation: fadeInAnimation 2s ease-in forwards;
-           padding:20px
+           padding: 20px;
        }
 
        @keyframes fadeInAnimation {
@@ -28,8 +28,51 @@
            }
        }
 
-       #navbar a {
-           color: #ccc;
+       #navbar {
+           display: flex;
+           justify-content: center;
+           margin: 4px;
+       }
+
+       .cards {
+           display: flex;
+           justify-content: center;
+           gap: 15px;
+           margin-bottom: 20px;
+       }
+
+       .cards .card {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+           text-align: center;
+           height: 80px; /* Adjust the height as desired */
+           width: 200px; /* Adjust the width as desired */
+           border-radius: 10px;
+           background-color: #333; /* Monochrome color */
+           color: white;
+           cursor: pointer;
+           transition: 400ms;
+       }
+
+       .cards .card p.tip {
+           font-size: 1em;
+           font-weight: 700;
+       }
+
+       .cards .card p.second-text {
+           font-size: .7em;
+       }
+
+       .cards .card:hover {
+           transform: scale(1.1, 1.1);
+       }
+
+       .cards:hover > .card:not(:hover) {
+           filter: blur(10px);
+           transform: scale(0.9, 0.9);
+           transition: 400ms;
        }
 
        .container {
@@ -39,10 +82,6 @@
        .container pre {
            color: #ccc;
            font-size: smaller;
-       }
-
-       #navbar a:hover {
-           color: #a59b9b;
        }
 
        .center-image {
@@ -58,58 +97,89 @@
        #status.online {
            color: green;
        }
+
+       .ascii-art {
+           text-align: center;
+           white-space: pre;
+           margin-top: 20px;
+           font-family: 'Courier New', Courier, monospace;
+           color: #eee;
+       }
+       
+       .ascii-art pre {
+           color: #eee; /* Set the color of the ASCII art to white */
+       }
    </style>
-   <!-- Add Open Graph metadata for link preview -->
-   <meta property="og:title" content="SPONSORED BY 1XBET & SUPERBET">
-   <meta property="og:description" content="AUTORITĂȚILE ÎL URĂSC! AFLĂ CUM FURĂ CUPRUL FĂRĂ A FI URMĂRIT (INDETECTABIL!)">
-   <meta property="og:image" content="https://eryllium.github.io/real2.png">
+   <!-- Meta tags for link preview -->
+   <meta name="title" content="SPONSORED BY 1XBET & SUPERBET">
+   <meta name="description" content="AUTORITĂȚILE ÎL URĂSC! AFLĂ CUM FURĂ CUPRUL FĂRĂ A FI URMĂRIT (INDETECTABIL!)">
+   <meta name="image" content="https://eryllium.github.io/real2.png">
 </head>
 <body>
-   <div id="navbar" style="text-align: center; margin: 4px;">
-       <span>
-           <a href="/">Home</a>
-       </span>
-       |
-       <span>
-           <a href="https://fleepy.tv/">nicked the navbar off this site 😭</a>
-       </span>
-       |
-       <span>
-           <a href="https://momazosdiego.com/">momazos diego</a>
-       </span>
-       |
-       <span>
-           <a href="https://discord.com/users/1199041169657696297">'cord</a>
-       </span>
+   <div id="navbar">
+       <div class="cards">
+           <a href="/">
+               <div class="card">
+                   <p class="tip">Home</p>
+               </div>
+           </a>
+           <a href="https://fleepy.tv/">
+               <div class="card">
+                   <p class="tip">Legacy</p>
+               </div>
+           </a>
+           <a href="https://momazosdiego.com/">
+               <div class="card">
+                   <p class="tip">Momazos diego</p>
+               </div>
+           </a>
+           <a href="https://discord.com/users/1199041169657696297/">
+               <div class="card">
+                   <p class="tip">'Cord</p>
+               </div>
+           </a>
+       </div>
    </div>
 
-   <div class="container text-center">
+   <div class="ascii-art">
        <pre>
-  ___.                        .__  .__  .__               
-  \_ |__   ___________ ___.__.|  | |  | |__|__ __  _____  
-   | __ \_/ __ \_  __ <   |  ||  | |  | |  |  |  \/     \ 
-   | \_\ \  ___/|  | \/\___  ||  |_|  |_|  |  |  /  Y Y  \
-   |___  /\___  >__|   / ____||____/____/__|____/|__|_|  /
-       \/     \/       \/                              \/  
+888                                888 888 ,e,                        
+888-~88e   e88~~8e  888-~\ Y88b  / 888 888  "  888  888 888-~88e-~88e 
+888  888b d888  88b 888     Y888/  888 888 888 888  888 888  888  888 
+888  8888 8888__888 888      Y8/   888 888 888 888  888 888  888  888 
+888  888P Y888    , 888       Y    888 888 888 888  888 888  888  888 
+888-_88"   "88___/  888      /     888 888 888 "88_-888 888  888  888 
+                           _/                                         
        </pre>
-       <div id="status"></div>
    </div>
 
-   <hr>
-
-   <div class="center-image">
-       <img src="real1.png" alt="Supporting the cause,every day.">
-   </div>
-
-   <hr>
-
-   <iframe src="https://john.citrons.xyz/embed?ref=example.com" style="margin-left:auto;display:block;margin-right:auto;max-width:732px;width:100%;height:94px;border:none;"></iframe>
-
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <div id="status"></div>
 
    <script>
+       const cards = document.querySelector('.cards');
+
+       cards.addEventListener('mouseover', (e) => {
+           const card = e.target.closest('.card');
+           if (card) {
+               cards.querySelectorAll('.card').forEach(c => {
+                   if (c !== card) {
+                       c.style.filter = 'blur(10px)';
+                       c.style.transform = 'scale(0.9, 0.9)';
+                   }
+               });
+           }
+       });
+
+       cards.addEventListener('mouseout', (e) => {
+           const card = e.target.closest('.card');
+           if (card) {
+               cards.querySelectorAll('.card').forEach(c => {
+                   c.style.filter = 'none';
+                   c.style.transform = 'scale(1, 1)';
+               });
+           }
+       });
+
        let data = fetch("https://api.lanyard.rest/v1/users/1199041169657696297").then((data)=>{
            data.json().then((data2)=>{
                let status = data2.data.discord_status;
@@ -131,3 +201,4 @@
    </script>
 </body>
 </html>
+
