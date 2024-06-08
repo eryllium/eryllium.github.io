@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <title>awooga</title>
-   <meta name="viewport" content="width=device-width, initial-scale=0.37, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,8 @@
            opacity: 0;
            animation: fadeInAnimation 2s ease-in forwards;
            padding: 20px;
+           margin: 0; /* Remove default margin */
+           box-sizing: border-box; /* Ensure padding does not affect width */
        }
 
        @keyframes fadeInAnimation {
@@ -39,6 +41,7 @@
            justify-content: center;
            gap: 15px;
            margin-bottom: 20px;
+           flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
        }
 
        .cards .card {
