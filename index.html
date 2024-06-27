@@ -10,37 +10,33 @@
    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
    <link rel="icon" href="favicon.png" type="image/x-icon">
    <style>
-       html, body {
-           height: 100%;
-           margin: 0;
-           padding: 0;
-           font-family: 'IBM Plex Mono', sans-serif;
-       }
-
        body {
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
-           background: linear-gradient(-45deg, #333333, #111111, #555555, #222222);
-           background-size: 400% 400%;
-           animation: gradient 15s ease infinite;
+           font-family: 'IBM Plex Mono', sans-serif;
+           background: #000000;
+           --gap: 5em;
+           --line: 1px;
+           --color: rgba(255, 255, 255, 0.2);
+
+           background-image: linear-gradient(
+               -90deg,
+               transparent calc(var(--gap) - var(--line)),
+               var(--color) calc(var(--gap) - var(--line) + 1px),
+               var(--color) var(--gap)
+           ),
+           linear-gradient(
+               0deg,
+               transparent calc(var(--gap) - var(--line)),
+               var(--color) calc(var(--gap) - var(--line) + 1px),
+               var(--color) var(--gap)
+           );
+           background-size: var(--gap) var(--gap);
            color: #eee;
            opacity: 0;
            animation: fadeInAnimation 2s ease-in forwards;
+           padding: 20px;
+           margin: 0;
            width: 100%;
-       }
-
-       @keyframes gradient {
-           0% {
-               background-position: 0% 50%;
-           }
-           50% {
-               background-position: 100% 50%;
-           }
-           100% {
-               background-position: 0% 50%;
-           }
+           height: 100%;
        }
 
        @keyframes fadeInAnimation {
@@ -71,10 +67,10 @@
            justify-content: center;
            flex-direction: column;
            text-align: center;
-           height: 80px;
-           width: 200px;
+           height: 80px; /* Adjust the height as desired */
+           width: 200px; /* Adjust the width as desired */
            border-radius: 10px;
-           background-color: #1a1a1a;
+           background-color: #1a1a1a; /* Darker monochrome color */
            color: white;
            cursor: pointer;
            transition: 400ms;
@@ -107,7 +103,7 @@
 
        #status {
            text-align: center;
-           margin-bottom: 20px;
+           margin-bottom: 20px; /* Add margin-bottom to create space */
        }
 
        #status.online {
@@ -121,9 +117,9 @@
            font-family: 'Courier New', Courier, monospace;
            color: #eee;
        }
-
+       
        .ascii-art pre {
-           color: #eee;
+           color: #eee; /* Set the color of the ASCII art to white */
        }
    </style>
    <!-- Meta tags for link preview -->
@@ -131,7 +127,7 @@
    <meta name="description" content="AUTORITĂȚILE ÎL URĂSC! AFLĂ CUM FURĂ CUPRUL FĂRĂ A FI URMĂRIT (INDETECTABIL!)">
    <meta name="image" content="https://eryllium.github.io/real2.png">
 </head>
-<body>
+<body class="container">
    <div id="navbar">
        <div class="cards">
            <a href="/">
