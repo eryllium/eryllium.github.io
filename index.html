@@ -10,19 +10,25 @@
    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
    <link rel="icon" href="favicon.png" type="image/x-icon">
    <style>
-       body {
+       html, body {
+           height: 100%;
+           margin: 0;
+           padding: 0;
            font-family: 'IBM Plex Mono', sans-serif;
+       }
+
+       body {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
            background: linear-gradient(-45deg, #333333, #111111, #555555, #222222);
            background-size: 400% 400%;
            animation: gradient 15s ease infinite;
-           height: 100vh;
            color: #eee;
            opacity: 0;
            animation: fadeInAnimation 2s ease-in forwards;
-           padding: 20px;
-           margin: 0;
            width: 100%;
-           height: 100%;
        }
 
        @keyframes gradient {
@@ -125,7 +131,7 @@
    <meta name="description" content="AUTORITĂȚILE ÎL URĂSC! AFLĂ CUM FURĂ CUPRUL FĂRĂ A FI URMĂRIT (INDETECTABIL!)">
    <meta name="image" content="https://eryllium.github.io/real2.png">
 </head>
-<body class="container">
+<body>
    <div id="navbar">
        <div class="cards">
            <a href="/">
