@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscillating Gradient Background</title>
+    <title>Oscillating Black and Dark Background</title>
     <style>
         body {
             height: 100vh;
@@ -13,9 +13,9 @@
             align-items: center;
             color: white;
             font-family: Arial, sans-serif;
-            background: linear-gradient(-45deg, black, gray); /* Initial gradient */
+            background: linear-gradient(-45deg, rgb(0, 0, 0), #000000); /* Oscillating between pure black and regular black */
             background-size: 400% 400%;
-            animation: oscillate 10s ease-in-out infinite; /* Animation properties */
+            animation: oscillate 60s ease-in-out infinite; /* Animation duration set to 1 minute */
         }
 
         @keyframes oscillate {
@@ -30,7 +30,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="fw-light text-white m-0"></h1>
+        <h1 class="fw-light text-white m-0">Oscillating Black and Dark Background</h1>
         <!-- Additional content if needed -->
     </div>
 </body>
