@@ -163,6 +163,7 @@
            margin: 4px;
            position: relative;
            z-index: 3;
+           top: 10px; /* Adjusted to move navbar down */
        }
 
        .cards {
@@ -189,9 +190,14 @@
            backdrop-filter: blur(10px);
        }
 
+       .cards .card p {
+           margin: 0;
+       }
+
        .cards .card p.tip {
            font-size: 0.9em;
            font-weight: 700;
+           margin-bottom: 5px; /* Adjust margin to lower text */
        }
 
        .cards .card p.second-text {
