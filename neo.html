@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <title>awooga</title>
-   <meta name="viewport" content="width=device-width, initial-scale=0.52, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
        * {
            margin: 0;
            padding: 0;
+           box-sizing: border-box;
        }
        body {
            font-family: 'IBM Plex Mono', 'Exo', sans-serif;
@@ -21,8 +22,8 @@
            padding: 20px;
            margin: 0;
            width: 100%;
-           height: 100vh;
-           overflow: hidden;
+           min-height: 100vh;
+           overflow-x: hidden;
        }
 
        .context {
@@ -35,7 +36,7 @@
        .context h1 {
            text-align: center;
            color: #fff;
-           font-size: 50px;
+           font-size: 2.5rem;
        }
 
        .area {
@@ -63,8 +64,8 @@
            list-style: none;
            width: 20px;
            height: 20px;
-           background: linear-gradient(to left, #2c2c2c, #1a1a1a);
-           animation: animate 25s linear infinite;
+           background: linear-gradient(to left, #262626, #262626);
+           animation: animate 100s linear infinite;
            bottom: -150px;
        }
 
@@ -166,6 +167,7 @@
 
        .cards {
            display: flex;
+           flex-wrap: wrap;
            justify-content: center;
            gap: 15px;
            margin-bottom: 20px;
@@ -233,10 +235,45 @@
            color: #eee;
            position: relative;
            z-index: 2;
+           overflow-x: auto;
        }
        
        .ascii-art pre {
            color: #eee;
+           font-size: 0.7rem;
+       }
+
+       @media (max-width: 768px) {
+           body {
+               padding: 10px;
+           }
+
+           .cards .card {
+               width: calc(50% - 15px);
+               height: 70px;
+           }
+
+           .ascii-art pre {
+               font-size: 0.5rem;
+           }
+
+           .context h1 {
+               font-size: 2rem;
+           }
+       }
+
+       @media (max-width: 480px) {
+           .cards .card {
+               width: 100%;
+           }
+
+           .ascii-art pre {
+               font-size: 0.4rem;
+           }
+
+           .context h1 {
+               font-size: 1.5rem;
+           }
        }
    </style>
    <!-- Meta tags for link preview -->
@@ -244,7 +281,7 @@
    <meta name="description" content="AUTORITĂȚILE ÎL URĂSC! AFLĂ CUM FURĂ CUPRUL FĂRĂ A FI URMĂRIT (INDETECTABIL!)">
    <meta name="image" content="https://eryllium.github.io/real2.png">
 </head>
-<body class="container">
+<body class="container-fluid">
    <div class="area">
        <ul class="circles">
            <li></li>
